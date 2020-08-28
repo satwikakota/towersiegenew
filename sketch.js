@@ -78,3 +78,8 @@ function mouseReleased(){
 function mouseDragged(){
   Body.setPosition(polygon1.body,{x:mouseX,y:mouseY});
 }
+function keyPressed(){
+  if(keyCode ===32){
+    slingpoly.attach(polygon1.body);
+  }
+}
