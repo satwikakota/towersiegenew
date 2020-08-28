@@ -3,7 +3,8 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 const Constraint= Matter.Constraint; 
-var engine,world; 
+var engine,world;
+var score=0; 
 function setup() {
   var canvas=createCanvas(1200,600);
   engineobject=Engine.create(); 
@@ -42,6 +43,9 @@ function setup() {
 function draw() {
   Engine.update(engineobject);
   background(255); 
+  textSize(30);
+  fill("black");
+  text("Score: "+ score, 1000,30);
   groundbase1.display(); 
   groundbase2.display(); 
   box1.display(); 
@@ -70,7 +74,32 @@ function draw() {
   box3newtop.display(); 
   box1newtop1.display();
   polygon1.display();
-  slingpoly.display();   
+  slingpoly.display(); 
+  box1.score(); 
+  box2.score(); 
+  box3.score(); 
+  box4.score(); 
+  box5.score(); 
+  box6.score(); 
+  box7.score();  
+  box1top.score(); 
+  box2top.score(); 
+  box3top.score(); 
+  box4top.score(); 
+  box5top.score();
+  box1top1.score(); 
+  box2top1.score(); 
+  box3top1.score();
+  box1top2.score(); 
+  box1new.score(); 
+  box2new.score(); 
+  box3new.score(); 
+  box4new.score(); 
+  box5new.score(); 
+  box1newtop.score();
+  box2newtop.score(); 
+  box3newtop.score(); 
+  box1newtop1.score();  
 }
 function mouseReleased(){
   slingpoly.fly();
